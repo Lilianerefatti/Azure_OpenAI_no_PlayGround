@@ -12,25 +12,22 @@ Antes de começar, é necessário:
 
 3. Conteúdo Programático
 O conteúdo aborda os seguintes tópicos:
-1.	Deploy de um recurso Azure OpenAI: Como criar e configurar o recurso no portal do Azure.
-2.	Exploração do Playground: Entender como funciona a interface e sua aplicação para multimodalidade (texto, imagens, áudio, etc.).
-3.	Configurações de Chat: Ajustar parâmetros como temperatura, top-p, tokens máximos e penalidades.
-4.	Integração com outros serviços: Como conectar blobs e dados prévios ao modelo.
+- Deploy de um recurso Azure OpenAI: Como criar e configurar o recurso no portal do Azure.
+- Exploração do Playground: Entender como funciona a interface e sua aplicação para multimodalidade (texto, imagens, áudio, etc.).
+- Configurações de Chat: Ajustar parâmetros como temperatura, top-p, tokens máximos e penalidades.
+- Integração com outros serviços: Como conectar blobs e dados prévios ao modelo.
 
 4. O que é o Playground?
-O Playground é uma interface interativa que permite experimentar os modelos de IA do Azure OpenAI sem a necessidade de programação avançada. Ele é ideal para:
-Desenvolver prompts.
-Testar diferentes configurações.
-Preparar modelos para aplicações específicas.
+O Playground é uma interface interativa que permite experimentar os modelos de IA do Azure OpenAI sem a necessidade de programação avançada. Ele é ideal para: Desenvolver prompts; Testar diferentes configurações; Preparar modelos para aplicações específicas.
 
 Principais Funcionalidades do Playground
 a)	Interface Simples e Intuitiva: O Playground possui uma interface limpa e fácil de usar. Basta digitar um prompt no campo de texto e clicar em "Enviar" para obter uma resposta do modelo.
 b)	Seleção de Modelos:Você pode escolher entre diferentes modelos disponíveis no Azure OpenAI, como: GPT-3 (por exemplo, text-davinci-003); GPT-4; Codex (para geração de código); outros modelos específicos para tarefas como embeddings ou classificação.
 c)	Ajuste de Parâmetros: O Playground permite ajustar vários parâmetros para controlar o comportamento do modelo. Alguns dos principais parâmetros incluem: 
-	Temperature: Controla a criatividade da resposta. Valores mais baixos (próximos a 0) resultam em respostas mais determinísticas e conservadoras, enquanto valores mais altos (próximos a 1) tornam as respostas mais criativas e variadas. 
-	Max Tokens: Define o número máximo de tokens que o modelo pode gerar na resposta. 
-	Top-P (Nucleus Sampling): Controla a diversidade das respostas ao limitar o conjunto de palavras consideradas pelo modelo. 
-	Frequency Penalty e Presence Penalty: Evitam que o modelo repita palavras ou frases frequentemente.
+* Temperature: Controla a criatividade da resposta. Valores mais baixos (próximos a 0) resultam em respostas mais determinísticas e conservadoras, enquanto valores mais altos (próximos a 1) tornam as respostas mais criativas e variadas. 
+* Max Tokens: Define o número máximo de tokens que o modelo pode gerar na resposta. 
+* Top-P (Nucleus Sampling): Controla a diversidade das respostas ao limitar o conjunto de palavras consideradas pelo modelo. 
+* Frequency Penalty e Presence Penalty: Evitam que o modelo repita palavras ou frases frequentemente.
 d)	Visualização em Tempo Real: As respostas são geradas quase instantaneamente, permitindo que você veja como o modelo interpreta diferentes prompts e parâmetros.
 e)	Exemplos Prontos: O Playground geralmente inclui exemplos pré-configurados para ajudar os usuários a entender como usar os modelos em diferentes cenários, como: Geração de texto; Resposta a perguntas; Tradução de idiomas; Geração de código.
 
@@ -42,10 +39,9 @@ Valores próximos a 0 geram respostas mais determinísticas (previsíveis). Isso
 Valores próximos a 1 tornam as respostas mais criativas e imprevisíveis. O modelo se aventura mais, selecionando palavras menos comuns, o que pode gerar respostas mais criativas, porém imprevisíveis. Exemplo: Com a mesma pergunta sobre alimentação balanceada e uma temperatura de 1, a resposta poderia ser: 'Uma alimentação equilibrada é como uma sinfonia, onde cada nutriente se une para criar harmonia no corpo, um banquete de vitalidade que canta no ritmo da saúde.
 
 •	Top-P (Nucleus Sampling): Define o conjunto de palavras consideradas pelo modelo, em outras palavras, é uma configuração que determina o número de palavras possíveis que o modelo vai considerar. Quando o valor de "top_p" é alto, o modelo explora mais opções de palavras, incluindo aquelas menos prováveis, o que resulta em um texto mais variado e imprevisível
-	Top-P 0.1: Considera apenas as palavras mais prováveis (10%).
-	Top_p = 0,5: Isso significa que o modelo considera apenas palavras que, juntas, representam pelo menos 50% da probabilidade total, excluindo as opções menos prováveis e mantendo um bom equilíbrio entre diversidade e coerência.
-Exemplo: Se você pedir um nome para uma cafeteria, com um top-p de 0,5, o modelo pode sugerir: "Café da Tarde".
-	Top-P 0.9: Considera um conjunto maior de palavras (90%). Isso permite que o modelo considere uma gama maior de palavras, aumentando a variedade e a criatividade das respostas.
+* Top-P 0.1: Considera apenas as palavras mais prováveis (10%).
+* Top_p = 0,5: Isso significa que o modelo considera apenas palavras que, juntas, representam pelo menos 50% da probabilidade total, excluindo as opções menos prováveis e mantendo um bom equilíbrio entre diversidade e coerência. Exemplo: Se você pedir um nome para uma cafeteria, com um top-p de 0,5, o modelo pode sugerir: "Café da Tarde".
+* Top-P 0.9: Considera um conjunto maior de palavras (90%). Isso permite que o modelo considere uma gama maior de palavras, aumentando a variedade e a criatividade das respostas.
 Exemplo: Para o mesmo nome de cafeteria com um top-p de 0,9, o modelo pode criar: "Sabor do Amanhecer: Café e Conforto".
 
 Misturando "temperatura" e "Top_p": Qual é o impacto?
@@ -79,7 +75,7 @@ Dicas: Seja claro, específico e forneça contexto para obter melhores resultado
 Áudio: Gerar narrações ou conversões de texto para fala.
 
 7. Melhores Práticas
-	Comece com valores padrão: Use as configurações iniciais para entender o comportamento do modelo. 
-	Ajuste um parâmetro por vez: Isso ajuda a identificar o impacto de cada ajuste.
-	Documente os resultados: Registre as mudanças e os resultados obtidos para melhorar futuras iterações.
-	Itere com base em feedback: Refine os prompts e ajustes com base nos resultados.
+* Comece com valores padrão: Use as configurações iniciais para entender o comportamento do modelo. 
+* Ajuste um parâmetro por vez: Isso ajuda a identificar o impacto de cada ajuste.
+* Documente os resultados: Registre as mudanças e os resultados obtidos para melhorar futuras iterações.
+* Itere com base em feedback: Refine os prompts e ajustes com base nos resultados.
